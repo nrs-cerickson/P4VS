@@ -82,7 +82,7 @@
       <HintPath>..\packages\Microsoft.Win32.Registry.4.7.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
     </Reference>
     <Reference Include="Nerdbank.Streams, Version=2.2.0.0, Culture=neutral, PublicKeyToken=cac503e1823ce71c, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nerdbank.Streams.2.1.37\lib\net472\Nerdbank.Streams.dll</HintPath>
+      <HintPath>..\packages\Nerdbank.Streams.2.2.26\lib\net472\Nerdbank.Streams.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="p4api.net">

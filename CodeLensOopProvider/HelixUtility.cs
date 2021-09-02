@@ -64,7 +64,7 @@ namespace CodeLensOopProvider
                         break;
                     }
                 }
-                catch (FileNotFoundException ex)
+                catch (FileNotFoundException)
                 {
                     // this will catch "Unable to find the specified file."
                     // in languages other than English.

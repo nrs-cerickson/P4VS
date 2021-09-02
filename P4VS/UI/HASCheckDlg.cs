@@ -127,7 +127,7 @@ namespace Perforce.P4VS.UI
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
             }

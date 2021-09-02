@@ -2716,7 +2716,6 @@ namespace Perforce.P4Scm
 
 		private string _p4VPath = null;
         private string _p4VCPath = null;
-	    private bool _p4vcExists = false;
 
 		/// <summary>
 		/// find P4V.exe
@@ -2779,7 +2778,6 @@ namespace Perforce.P4Scm
                 {
                     Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.exe";
                     _p4VCPath = installRoot + "p4vc.exe";
-                    _p4vcExists = true;
                     return _p4VCPath;
                 }
                 else
@@ -2793,14 +2791,12 @@ namespace Perforce.P4Scm
                 {
                     Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.exe";
                     _p4VCPath = installRoot + "p4vc.exe";
-                    _p4vcExists = true;
                     return _p4VCPath;
                 }
                 else if (installRoot != null && File.Exists(installRoot + "p4vc.bat"))
                 {
                     Preferences.LocalSettings["P4VC_path"] = installRoot + "p4vc.bat";
                     _p4VCPath = installRoot + "p4vc.bat";
-                    _p4vcExists = true;
                     return _p4VCPath;
                 }
                 else

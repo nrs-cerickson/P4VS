@@ -4,7 +4,7 @@ configuration:
 - Release
 platform: x86
 before_build:
-- ps: .\BeforeBuild.ps1
+- ps: .\Requirements.ps1
 build:
   project: P4VS.sln
   verbosity: minimal

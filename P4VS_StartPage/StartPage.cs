@@ -83,7 +83,7 @@ namespace Perforce.P4VS_StartPage
             if(ExecuteCommand("File.Perforce.P4VS.Open_Solution_in_Perforce_Depot"))
             {
                 downloadProgress.Report(new ServiceProgressData(string.Empty, string.Empty, 1, 1));
-                return null;
+                return System.Threading.Tasks.Task.FromResult<CodeContainer>(null);
             }
             else
             {
@@ -93,14 +93,14 @@ namespace Perforce.P4VS_StartPage
                         ServiceProvider.GlobalProvider.GetService(typeof(IVsRegisterScciProvider)) as IVsRegisterScciProvider;
                     if (registerSccProvider == null)
                     {
-                        return null;
+                        return System.Threading.Tasks.Task.FromResult<CodeContainer>(null);
                     }
 
                     // Try to activate the Scc provider
                     int hr = registerSccProvider.RegisterSourceControlProvider(GuidList.guidP4VsProvider);
                     if (ErrorHandler.Failed(hr))
                     {
-                        return null;
+                        return System.Threading.Tasks.Task.FromResult<CodeContainer>(null);
                     }
                 }
                 catch (Exception ex)
@@ -113,27 +113,27 @@ namespace Perforce.P4VS_StartPage
                 if (ExecuteCommand("File.Perforce.P4VS.Open_Solution_in_Perforce_Depot"))
                 {
                     downloadProgress.Report(new ServiceProgressData(string.Empty, string.Empty, 1, 1));
-                    return null;
+                    return System.Threading.Tasks.Task.FromResult<CodeContainer>(null);
                 }
             }
 
             System.Windows.Forms.MessageBox.Show(Resources.StartPagePluginRegError);
             
-            return null;
+            return System.Threading.Tasks.Task.FromResult<CodeContainer>(null);
         }
 
         public Task<CodeContainer> AcquireCodeContainerAsync(CodeContainer onlineCodeContainer, IProgress<ServiceProgressData> downloadProgress, CancellationToken cancellationToken)
         {
             // Implementing this interface member is required,
             // but it will never be used.
-            return null;
+            return System.Threading.Tasks.Task.FromResult<CodeContainer>(null);
         }
 
         public Task<CodeContainer> AcquireCodeContainerAsync(RemoteCodeContainer onlineCodeContainer, IProgress<ServiceProgressData> downloadProgress, CancellationToken cancellationToken)
         {
             // Implementing this interface member is required,
             // but it will never be used.
-            return null;
+            return System.Threading.Tasks.Task.FromResult<CodeContainer>(null);
         }
 
     }

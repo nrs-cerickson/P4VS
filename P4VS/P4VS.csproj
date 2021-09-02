@@ -1069,7 +1069,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="libs\Release\p4bridge.dll">
-      <Link>p4bridge.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

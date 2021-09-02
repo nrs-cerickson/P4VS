@@ -1,4 +1,5 @@
 [![Support](https://img.shields.io/badge/Support-Official-green.svg)](mailto:support@perforce.com)
+[![Build status](https://ci.appveyor.com/api/projects/status/udrvr61oj0s2snb1?svg=true)](https://ci.appveyor.com/project/nrs-cerickson/p4vs)
 
 # P4VS
 

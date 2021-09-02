@@ -8,7 +8,12 @@ P4VS, the Helix Plugin for Visual Studio , enables you to use Helix Core server,
 ## Requirements
 
 P4VS requires the C# API for P4: [p4api.net](https://github.com/perforce/p4api.net)
-The x86 libraries need to be placed in `P4VS\libs` folder
+
+The x86 libraries need to be placed in these directories:
+ * `P4VS\libs\Release`
+ * `P4VS_StartPage\libs\Release`
+
+You can run the powershell script `Requirements.ps1` to do this automatically.
 
 ## Documentation
 For more information please refer to the [P4VS User's Guide](http://www.perforce.com/perforce/doc.current/manuals/p4vs/index.html)

@@ -205,7 +205,7 @@ namespace CodeLensOopProvider
             /// </remarks>
             public void Invalidate()
             {
-                this.InvalidatedAsync?.Invoke(this, EventArgs.Empty).ConfigureAwait(false);
+                this.InvalidatedAsync.InvokeAsync(this, EventArgs.Empty).ConfigureAwait(false);
             }
 
             private static ImageId GetCommitTypeIcon(Changelist commit)

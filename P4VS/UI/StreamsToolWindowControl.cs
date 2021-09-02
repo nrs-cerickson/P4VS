@@ -1623,7 +1623,7 @@ namespace Perforce.P4VS
                                 while (isParent == false)
                                 {
                                     thisParent = nextParent.Parent.Path;
-                                    nextParent = Scm.GetStream(thisParent, null, null);
+                                    nextParent = Scm.GetStream(thisParent, null);
                                     hierarchyStreams.Add(nextParent);
                                     if (nextParent.Parent.Path == "none")
                                     {
@@ -1706,7 +1706,7 @@ namespace Perforce.P4VS
                                 // item to it.
                                 else
                                 {
-                                    P4.Stream fetchedParent = Scm.GetStream(currentChild.Parent.Path, null, null);
+                                    P4.Stream fetchedParent = Scm.GetStream(currentChild.Parent.Path, null);
                                     TreeListViewItem createdItem = createStreamTreeListViewItem(fetchedParent, InfilteredView);
                                     createdItem.ChildNodes.Add(currentItem);
                                     addedParents.Add(fetchedParent.Name, createdItem);
@@ -1970,7 +1970,7 @@ namespace Perforce.P4VS
             int treeStateImage = item.treeStateImageIndex;
             bool isExpanded = item.Expanded;
             P4.Stream stream = item.Tag as P4.Stream;
-            stream = Scm.GetStream(stream.Id, null, null);
+            stream = Scm.GetStream(stream.Id, null);
             TreeListViewItem parent = item.ParentItem;
 
             item = createStreamTreeListViewItem(stream, true);
@@ -2661,7 +2661,7 @@ namespace Perforce.P4VS
             P4.Options opts = new P4.Options();
             opts["-v"] = null;
             opts["-o"] = null;
-            streamInfo = Scm.GetStream(stream.Id, null, opts);
+            streamInfo = Scm.GetStream(stream.Id, opts);
             if (streamInfo == null)
             {
                 return;

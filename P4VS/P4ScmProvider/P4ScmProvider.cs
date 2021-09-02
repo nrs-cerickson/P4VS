@@ -4236,7 +4236,7 @@ namespace Perforce.P4Scm
 			return list;
 		}
 		
-		public P4.Stream GetStream(string stream, string parent, P4.Options options)
+		public P4.Stream GetStream(string stream, P4.Options options)
 		{
 			if (Offline)
 			{
@@ -4245,7 +4245,7 @@ namespace Perforce.P4Scm
 			P4.Stream value = null;
 			try
 			{
-                value = Connection.Repository.GetStream(stream, parent, options);
+                value = Connection.Repository.GetStream(stream, options);
                 P4.P4CommandResult results = Connection.Repository.Connection.LastResults;
 				P4ErrorDlg.Show(results, false);
 			}

@@ -135,18 +135,18 @@ namespace Perforce.P4VS
             }
 
 
-			P4.Stream effectiveTarget = _scm.GetStream(_target,null,null);
-            P4.Stream effectiveSource = _scm.GetStream(sourceSelection, null, null);
+			P4.Stream effectiveTarget = _scm.GetStream(_target, null);
+            P4.Stream effectiveSource = _scm.GetStream(sourceSelection, null);
 
 			if (effectiveTarget.Type == P4.StreamType.Virtual)
 			{
 				if (effectiveTarget.BaseParent != null)
 				{
-                    effectiveTarget = _scm.GetStream(effectiveTarget.BaseParent.Path, null, null);
+                    effectiveTarget = _scm.GetStream(effectiveTarget.BaseParent.Path, null);
 				}
 				else if (effectiveTarget.Parent != null)
 				{
-                    effectiveTarget = _scm.GetStream(effectiveTarget.Parent.Path, null, null);
+                    effectiveTarget = _scm.GetStream(effectiveTarget.Parent.Path, null);
 				}
 			}
 
@@ -154,11 +154,11 @@ namespace Perforce.P4VS
 			{
 				if (effectiveSource.BaseParent != null)
 				{
-                    effectiveSource = _scm.GetStream(effectiveSource.BaseParent.Path, null, null);
+                    effectiveSource = _scm.GetStream(effectiveSource.BaseParent.Path, null);
 				}
 				else if (effectiveSource.Parent != null)
 				{
-                    effectiveSource = _scm.GetStream(effectiveSource.Parent.Path, null, null);
+                    effectiveSource = _scm.GetStream(effectiveSource.Parent.Path, null);
 				}
 			}
 
@@ -245,8 +245,8 @@ namespace Perforce.P4VS
                 sourceSelection = this.sourceTB.Text;
             }
 
-            P4.Stream effectiveTarget = _scm.GetStream(_target, null, null);
-            P4.Stream effectiveSource = _scm.GetStream(sourceSelection, null, null);
+            P4.Stream effectiveTarget = _scm.GetStream(_target, null);
+            P4.Stream effectiveSource = _scm.GetStream(sourceSelection, null);
 
             if(effectiveSource==null||effectiveTarget==null)
             {
@@ -257,11 +257,11 @@ namespace Perforce.P4VS
 			{
 				if (effectiveTarget.BaseParent != null)
 				{
-                    effectiveTarget = _scm.GetStream(effectiveTarget.BaseParent.Path, null, null);
+                    effectiveTarget = _scm.GetStream(effectiveTarget.BaseParent.Path, null);
 				}
 				else if (effectiveTarget.Parent != null)
 				{
-                    effectiveTarget = _scm.GetStream(effectiveTarget.Parent.Path, null, null);
+                    effectiveTarget = _scm.GetStream(effectiveTarget.Parent.Path, null);
 				}
 			}
 
@@ -269,11 +269,11 @@ namespace Perforce.P4VS
 			{
 				if (effectiveSource.BaseParent != null)
 				{
-                    effectiveSource = _scm.GetStream(effectiveSource.BaseParent.Path, null, null);
+                    effectiveSource = _scm.GetStream(effectiveSource.BaseParent.Path, null);
 				}
 				else if (effectiveSource.Parent != null)
 				{
-                    effectiveSource = _scm.GetStream(effectiveSource.Parent.Path, null, null);
+                    effectiveSource = _scm.GetStream(effectiveSource.Parent.Path, null);
 				}
 			}
 

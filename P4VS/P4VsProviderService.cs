@@ -3281,7 +3281,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			target = current.Stream;
 			if (target != null)
 			{
-                P4.Stream stream = ScmProvider.GetStream(target, null, null);
+                P4.Stream stream = ScmProvider.GetStream(target, null);
 				//need to convert the list here
 				//case 1
 				if (stream.Type == P4.StreamType.Development||
@@ -3363,7 +3363,7 @@ Resources.P4VS, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			target = current.Stream;
 			if (target != null)
 			{
-                P4.Stream stream = ScmProvider.GetStream(target, null, null);
+                P4.Stream stream = ScmProvider.GetStream(target, null);
 				//need to convert the list here
 				//case 1, 3, and 4
 				if ((stream.Type == P4.StreamType.Development) ||

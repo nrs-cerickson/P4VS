@@ -8,3 +8,5 @@ before_build:
 build:
   project: P4VS.sln
   verbosity: minimal
+artifacts:
+- path: HelixVS\bin\$(configuration)\P4VS.vsix

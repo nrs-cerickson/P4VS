@@ -10,3 +10,4 @@ build:
   verbosity: minimal
 artifacts:
 - path: HelixVS\bin\$(configuration)\P4VS.vsix
+  name: P4VS.vsix
